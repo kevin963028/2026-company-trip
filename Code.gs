@@ -13,7 +13,7 @@ function setup() {
 
   sheet.setName(RESPONSE_SHEET_NAME);
   sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
-  sheet.getRange("D:D").setNumberFormat("@");
+  sheet.getRange("A:E").setNumberFormat("@");
   sheet.setFrozenRows(1);
   sheet.autoResizeColumns(1, HEADERS.length);
   properties.setProperty(SPREADSHEET_ID_KEY, spreadsheet.getId());
@@ -38,7 +38,7 @@ function doPost(event) {
 
     const sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName(RESPONSE_SHEET_NAME);
     const nextRow = sheet.getLastRow() + 1;
-    sheet.getRange(nextRow, 4).setNumberFormat("@");
+    sheet.getRange(nextRow, 1, 1, 5).setNumberFormat("@");
     sheet.getRange(nextRow, 1, 1, HEADERS.length).setValues([[
       name,
       email,

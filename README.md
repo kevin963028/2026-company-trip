@@ -8,10 +8,10 @@
 
 ## Google 試算表與 Apps Script
 
-1. 在 `script.google.com` 建立 Apps Script 專案，將本專案的 `Code.gs` 內容貼入編輯器。
-2. 選取並執行 `setup`，依 Google 畫面完成授權。此步驟會建立 `2026_公司旅遊` 試算表及標題列，並把「電話」欄設為純文字格式。
-3. 選擇「部署」>「新增部署作業」>「網頁應用程式」，設定「執行身分」為自己、「誰可以存取」為任何人，完成部署並複製 `/exec` 網址。
-4. 將部署網址填入 `config.js` 的 `appsScriptUrl`。
-5. 重新發布網站後，以兩筆測試資料確認報名資料新增正確，並檢查電話前導零仍保留。
+試算表：[2026_公司旅遊](https://docs.google.com/spreadsheets/d/1DOnzsxip0ZsSq6NXhmil2GLWuGNhDWNSqKR1YeWGs4A/edit)
 
-`Code.gs` 會在每次新增資料前再次將電話儲存格設為文字格式；欄位順序為姓名、Email、單位、電話、暱稱、報名時間。
+Apps Script 專案：[2026_公司旅遊_報名系統](https://script.google.com/home/projects/1_vqNToUhBxKnH_a78lAzV-Vs0RUaqiVT7SwPa3SOGUwrVoKtZZKzliGD/edit)
+
+網頁應用程式已部署並設定為任何人可存取。部署網址設定在 `config.js`；網站重新發布後即可送出報名。
+
+`Code.gs` 會將姓名、Email、單位、電話及暱稱欄設為純文字；欄位順序為姓名、Email、單位、電話、暱稱、報名時間。
