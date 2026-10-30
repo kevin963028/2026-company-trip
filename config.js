@@ -1,3 +1,3 @@
 window.EVENT_CONFIG = {
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxZmKt30A6GSoTark7LVCROfMw29lH63EckR3rGz1puWs8h9azwgghRYfsfK4IiUeqS/exec"
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbztM_May5aX5yo490a7Xr3L8ePsowA-8uCeva2ny3OZZYoPWjWQJ5MuU0jRVzbsjtAr/exec"
 };
