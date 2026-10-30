@@ -23,14 +23,16 @@ function setup() {
 }
 
 function doPost(event) {
+  let nonce = "";
   try {
-    const data = event.parameter;
+    const data = event.parameter || {};
+    nonce = String(data.nonce || "").trim();
     const name = String(data.name || "").trim();
     const email = String(data.email || "").trim();
     const phone = String(data.phone || "").trim();
 
-    if (!name || !email || !phone) {
-      return responsePage("error", "請填寫姓名、Email 和電話。");
+    if (!name || !email || !phone || !nonce) {
+      return responsePage("error", "請填寫姓名、Email 和電話。", nonce);
     }
 
     const spreadsheetId = PropertiesService.getScriptProperties().getProperty(SPREADSHEET_ID_KEY);
@@ -48,20 +50,21 @@ function doPost(event) {
       new Date()
     ]]);
 
-    return responsePage("success", "報名成功");
+    return responsePage("success", "報名成功", nonce);
   } catch (error) {
     console.error(error);
-    return responsePage("error", "系統暫時無法處理報名。");
+    return responsePage("error", "系統暫時無法處理報名。", nonce);
   }
 }
 
-function responsePage(status, message) {
+function responsePage(status, message, nonce) {
   const payload = JSON.stringify({
     type: "employee-trip-registration",
     status: status,
-    message: message
+    message: message,
+    nonce: nonce
   });
-  const html = "<!doctype html><html><body><script>parent.postMessage(" + payload + ", '*');</script></body></html>";
+  const html = "<!doctype html><html><body><script>window.top.postMessage(" + payload + ", '*');</script></body></html>";
   return HtmlService.createHtmlOutput(html)
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
