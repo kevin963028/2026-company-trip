@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8e9">
+    <meta name="description" content="2026 宇宙科技公司員工旅遊，墾丁一日遊活動報名。">
+    <title>2026 宇宙科技公司員工旅遊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="event-page">
+      <header class="event-title page-row">
+        <p class="eyebrow"><span class="sun-mark" aria-hidden="true"></span> COMPANY DAY TRIP · KENTING</p>
+        <h1>2026 宇宙科技公司員工旅遊</h1>
+        <p class="title-note">把工作暫停一天，把好心情帶回團隊。</p>
+      </header>
+
+      <section class="cover page-row" aria-label="墾丁員工旅遊活動主視覺">
+        <img src="cover.jpg" alt="墾丁海岸與燈塔的員工旅遊活動主視覺">
+        <div class="cover-caption"><span>一日南國假期</span><span>KENTING · 2026</span></div>
+      </section>
+
+      <section class="event-grid page-row" aria-label="活動內容與報名表單">
+        <article class="event-details">
+          <div class="section-heading">
+            <p class="eyebrow">THE PLAN</p>
+            <h2>把海風和好心情<br>一起帶回來。</h2>
+          </div>
+          <p class="description">墾丁一日小旅行，從南灣水上活動、海邊烤肉到沙灘散步，留一整天給陽光、海風，還有一起出發的夥伴。</p>
+          <dl class="trip-facts">
+            <div><dt>目的地</dt><dd>屏東・墾丁</dd></div>
+            <div><dt>活動</dt><dd>水上活動、海邊烤肉</dd></div>
+            <div><dt>行程</dt><dd>沙灘散步與海岸時光</dd></div>
+            <div><dt>形式</dt><dd>員工一日旅遊</dd></div>
+          </dl>
+          <p class="closing-note"><span aria-hidden="true">✳</span> 海邊見，記得帶上你的度假心情。</p>
+        </article>
+
+        <section class="registration" aria-labelledby="registration-title">
+          <div class="registration-heading">
+            <div>
+              <p class="eyebrow">SAVE YOUR SEAT</p>
+              <h2 id="registration-title">我要報名</h2>
+            </div>
+            <span class="seat-mark" aria-hidden="true">✳</span>
+          </div>
+          <form id="registration-form" action="" method="post" target="registration-frame">
+            <label for="name">姓名 <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="怎麼稱呼你？" required>
+
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+
+            <div class="field-pair">
+              <div class="field-group">
+                <label for="department">單位</label>
+                <input id="department" name="department" type="text" autocomplete="organization" placeholder="例如：產品部">
+              </div>
+              <div class="field-group">
+                <label for="phone">電話 <span aria-hidden="true">*</span></label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required>
+              </div>
+            </div>
+
+            <label for="nickname">暱稱</label>
+            <input id="nickname" name="nickname" type="text" placeholder="旅途中想被怎麼叫？">
+
+            <button type="submit"><span>送出報名</span><span aria-hidden="true">↗</span></button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <iframe name="registration-frame" id="registration-frame" title="報名送出回覆" class="submission-frame"></iframe>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
