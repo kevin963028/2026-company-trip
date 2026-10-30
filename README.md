@@ -4,7 +4,7 @@
 
 ## GitHub Pages
 
-網站網址：部署完成後填入 GitHub Pages 網址。
+網站網址：[https://kevin963028.github.io/2026-company-trip/](https://kevin963028.github.io/2026-company-trip/)
 
 ## Google 試算表與 Apps Script
 
